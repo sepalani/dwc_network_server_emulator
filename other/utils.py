@@ -262,9 +262,9 @@ def print_hex(data, cols=16, sep=' ', pretty=True):
     Can be pretty printed but takes more time.
     """
     if pretty:
-        print pretty_print_hex(data, cols, sep)
+        print(pretty_print_hex(data, cols, sep))
     else:
-        print sep.join("%02x" % b for b in bytearray(data))
+        print(sep.join("%02x" % b for b in bytearray(data)))
 
 
 def pretty_print_hex(orig_data, cols=16, sep=' '):

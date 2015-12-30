@@ -442,9 +442,9 @@ class NasHTTPServerHandler(BaseHTTPServer.BaseHTTPRequestHandler):
                                           .replace(">", "+")
                                           .replace("-", "/"))
             except TypeError:
-                print "Could not decode following string: ret[%s] = %s" \
-                      % (k, v[0])
-                print "url: %s" % s
+                print("Could not decode following string: ret[%s] = %s"
+                      % (k, v[0]))
+                print("url: %s" % s)
                 # If you don't assign it like this it'll be a list, which
                 # breaks other code.
                 ret[k] = v[0]

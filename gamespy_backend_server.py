@@ -270,7 +270,7 @@ class GameSpyBackendServer(object):
         # VALID.
         # Never run the expression received from the client before running
         # this function on the expression first.
-        # print type(node)
+        # print(type(node))
 
         # Only allow literals, comparisons, and math operations
         valid_node = False
@@ -304,7 +304,7 @@ class GameSpyBackendServer(object):
             valid_node = self.validate_ast(node.left, num_literal_only)
 
             for op in node.ops:
-                # print type(op)
+                # print(type(op))
 
                 # Restrict "is", "is not", "in", and "not in" python
                 # comparison operators. These are python-specific and the

@@ -205,16 +205,16 @@ class Session(LineReceiver):
                         fields = [x for x in fields.split('\\')
                                   if x and not x.isspace()]
 
-                    # print "%02x %02x %08x" % \
-                    #       (list_version, encoding_version, game_version)
-                    # print "%s" % query_game
-                    # print "%s" % game_name
-                    # print "%s" % challenge
-                    # print "%s" % filter
-                    # print "%s" % fields
+                    # print("%02x %02x %08x" %
+                    #       (list_version, encoding_version, game_version))
+                    # print("%s" % query_game)
+                    # print("%s" % game_name)
+                    # print("%s" % challenge)
+                    # print("%s" % filter)
+                    # print("%s" % fields)
 
-                    # print "%08x" % options
-                    # print "%d %08x" % (max_servers, source_ip)
+                    # print("%08x" % options)
+                    # print("%d %08x" % (max_servers, source_ip))
 
                     self.log(logging.DEBUG,
                              "list version: %02x / encoding version: %02x /"
@@ -439,7 +439,7 @@ class Session(LineReceiver):
                not server['requested']:
                 # If the requested fields weren't found then don't return
                 # a server. This fixes a bug with Mario Kart DS.
-                # print "Requested was empty"
+                # print("Requested was empty")
                 server = {}
 
             if "__console__" in server:
